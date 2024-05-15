@@ -26,3 +26,5 @@ const game = {
 // desired number index == desired number value - 1
 
 console.log(pokemon[58].name);
+
+console.log(game);
