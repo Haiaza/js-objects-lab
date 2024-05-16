@@ -28,3 +28,22 @@ const game = {
 console.log(pokemon[58].name);
 
 console.log(game);
+/*
+Exercise 3
+1. Add a new property to the `game` object. Let's call it "difficulty".
+2. Choose a value for "difficulty" that you think fits the game. Ex: "Easy", "Med" or "Hard". How would you assign it?
+
+
+Solve Exercise 3 here:
+*/
+//dot notation is quicker
+game.difficulty = "Med";
+
+// OR
+//bracket notation is a little different
+const difficulty = "x";
+// game[difficulty] = "Easy";
+// console.log(game[difficulty]);
+// console.log(game.difficulty);
+// bracket notation in the log show's the assignment side by side inside the difficulty property.
+console.log(game);
