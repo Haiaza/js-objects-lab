@@ -65,5 +65,9 @@ Exercise 5
 Solve Exercise 5 here:
 */
 
+game.party.push(pokemon[37])
 
+party.unshift(pokemon[35])
+party.unshift(pokemon[54])
 
+console.log(game.party)
