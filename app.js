@@ -78,5 +78,6 @@ Exercise 6
 Solve Exercise 6 here:
 */
 
-
-console.log(party.sort(pokemon.hp))
+party.forEach(member => {
+  console.log(member.hp)
+});
