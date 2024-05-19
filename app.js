@@ -97,5 +97,5 @@ game.gyms.forEach(gym => {
   if (gym.difficulty < 3) {
     gym.completed = true
   }
-  console.log(game.gyms)
 });
+console.log(game.gyms);
