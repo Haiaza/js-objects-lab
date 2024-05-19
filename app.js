@@ -78,8 +78,9 @@ Exercise 6
 Solve Exercise 6 here:
 */
 const partyHp = () =>{
-
+party.sort((a,b) => b.hp - a.hp)
 party.forEach(member => {
   console.log(member.hp)
 })
 };
+partyHp();
