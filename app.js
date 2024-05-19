@@ -55,7 +55,6 @@ const bestStarter = pokemon[3]
 let party = game.party
 party.push(bestStarter)
 
-console.log(game.party)
 /*
 Exercise 5
 1. Choose three more Pokémon from the `pokemon` array and add them to your party.
@@ -70,4 +69,14 @@ game.party.push(pokemon[37])
 party.unshift(pokemon[35])
 party.unshift(pokemon[54])
 
-console.log(game.party)
+/*
+Exercise 6
+1. Arrange the Pokémon in `game.party` by their HP. The one with the highest HP should come first.
+2. You'll need to use the `.sort()` method. How does the compare function work in sorting numbers?
+
+
+Solve Exercise 6 here:
+*/
+
+
+console.log(party.sort(pokemon.hp))
