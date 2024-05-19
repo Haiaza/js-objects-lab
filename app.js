@@ -77,7 +77,9 @@ Exercise 6
 
 Solve Exercise 6 here:
 */
+const partyHp = () =>{
 
 party.forEach(member => {
   console.log(member.hp)
-});
+})
+};
