@@ -117,7 +117,15 @@ Solve Exercise 8 here:
 console.log(party);
 
 let evolveCharmander = () => {
-  if (party.includes({ number: 4 })) {
-    console.log("Test Success");
+  let charmanderIndex = party.findIndex((pokedex) => pokedex.number === 4);
+  // so the index method when it CANNOT find something returns -1, when it does find the thing, it returns that value
+  // the below logic only runs when that value is anything but -1, aka indexFound
+  if (charmanderIndex !== -1) {
+    // we open the party and at the location of charmanderIndex we are going to replace the charmander info with Charmeleon
+
+    // pokedex in these two functions refers to the pokemon variable inside data.js . i thought pokedex makes the most sense, though its confusing to get  from reading alone.
+    party[charmanderIndex] = pokemon.find((pokedex) => pokedex.number === 5);
   }
 };
+evolveCharmander();
+console.log(party);
