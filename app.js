@@ -129,3 +129,13 @@ let evolveCharmander = () => {
 };
 evolveCharmander();
 console.log(party);
+/*
+Exercise 9
+1. Print the name of each Pokémon in your party.
+2. Consider using a loop or an array method to access each Pokémon's name.
+
+Solve Exercise 9 here:
+*/
+for (let index = 0; index < array.length; index++) {
+  const element = array[index];
+}
