@@ -51,9 +51,9 @@ Exercise 4
 Solve Exercise 4 here:
 
 */
-const bestStarter = pokemon[3]
-let party = game.party
-party.push(bestStarter)
+const bestStarter = pokemon[3];
+let party = game.party;
+party.push(bestStarter);
 
 /*
 Exercise 5
@@ -64,10 +64,10 @@ Exercise 5
 Solve Exercise 5 here:
 */
 
-game.party.push(pokemon[37])
+game.party.push(pokemon[37]);
 
-party.unshift(pokemon[35])
-party.unshift(pokemon[54])
+party.unshift(pokemon[35]);
+party.unshift(pokemon[54]);
 
 /*
 Exercise 6
@@ -77,11 +77,11 @@ Exercise 6
 
 Solve Exercise 6 here:
 */
-const partyHp = () =>{
-party.sort((a,b) => b.hp - a.hp)
-party.forEach(member => {
-  console.log(member.hp)
-})
+const partyHp = () => {
+  party.sort((a, b) => b.hp - a.hp);
+  party.forEach((member) => {
+    console.log(member.hp);
+  });
 };
 partyHp();
 /*
@@ -93,9 +93,9 @@ Exercise 7
 Solve Exercise 7 here:
 */
 
-game.gyms.forEach(gym => {
+game.gyms.forEach((gym) => {
   if (gym.difficulty < 3) {
-    gym.completed = true
+    gym.completed = true;
   }
 });
 console.log(game.gyms);
@@ -114,10 +114,10 @@ More Hints: The existing starter Pokemon will be *replaced* in your party with t
 
 Solve Exercise 8 here:
 */
-console.log(party)
+console.log(party);
 
-let evolveCharmander = () =>{
-  if (party) {
-    console.log()
+let evolveCharmander = () => {
+  if (party.includes({ number: 4 })) {
+    console.log("Test Success");
   }
-}
+};
