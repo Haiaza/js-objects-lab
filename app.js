@@ -18,10 +18,10 @@ const game = {
     { name: "rare candy", quantity: 99 },
   ],
   partyCount() {
-    for (let currentTally = 0; currentTally < party.length; currentTally++) {
+    party.forEach((pokemon) => {
       monsterTally += 1;
-      return monsterTally;
-    }
+      console.log(monsterTally);
+    });
   },
 };
 
@@ -262,5 +262,7 @@ This method should:
 
 Solve Exercise 15 here:
 */
+let monsterTally = 0;
+
 game.partyCount();
 console.log(game.partyCount());
