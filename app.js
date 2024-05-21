@@ -264,5 +264,4 @@ Solve Exercise 15 here:
 */
 let monsterTally = 0;
 
-game.partyCount();
 console.log(game.partyCount());
