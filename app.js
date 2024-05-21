@@ -205,7 +205,7 @@ for (let i = 0; i < game.gyms.length; i++) {
   if (game.gyms[i].difficulty < 6) {
     game.gyms[i].completed = true
   }
-}
+};
 console.log(game.gyms)
 /*
 Exercise 14
@@ -229,3 +229,21 @@ For example, if five gym objects have a value of `true` on their `completed` pro
 
 Solve Exercise 14 here:
 */
+const gymTally = {
+  completed: 0,
+  incomplete: 0
+};
+
+game.gymStatus= () => {
+  for (let i = 0; i < game.gyms.length; i++) {
+    if (game.gyms[i].completed === true) {
+      gymTally.completed += 1;
+    }else {
+      gymTally.incomplete += 1;
+    }
+    
+  }
+}
+game.gymStatus();
+
+console.log(gymTally)
