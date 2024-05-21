@@ -136,6 +136,6 @@ Exercise 9
 
 Solve Exercise 9 here:
 */
-for (let index = 0; index < array.length; index++) {
-  const element = array[index];
+for (let i = 0; i < party.length; i++) {
+  console.log(party[i].name)
 }
