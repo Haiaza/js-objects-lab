@@ -147,8 +147,8 @@ Exercise 10
 
 Solve Exercise 10 here:
 */
-console.log(pokemon.forEach(entry => {
-  if (entry.starter === true) {
+pokemon.forEach(entry => {
+  if (entry.starter !== false) {
     console.log(entry.name)
   }
-}));
+});
