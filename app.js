@@ -24,6 +24,18 @@ const game = {
       console.log(monsterTally);
     });
   },
+  catchPokemon(pokemonObj) {
+    party.push(pokemonObj);
+  },
+  gymStatus() {
+    for (let i = 0; i < game.gyms.length; i++) {
+      if (game.gyms[i].completed === true) {
+        gymTally.completed += 1;
+      } else {
+        gymTally.incomplete += 1;
+      }
+    }
+  },
 };
 
 //console.dir(pokemon, { maxArrayLength: null });
@@ -149,9 +161,9 @@ Exercise 9
 
 Solve Exercise 9 here:
 */
-// for (let i = 0; i < party.length; i++) {
-//   console.log(party[i].name)
-// }
+for (let i = 0; i < party.length; i++) {
+  console.log(party[i].name);
+}
 /*
 Exercise 10
 1. Can you print out all the starter Pokémon from the `pokemon` array?
@@ -176,11 +188,11 @@ After writing this method, call it and pass in a Pokemon object of your choice f
 
 Solve Exercise 11 here:
 */
-game.catchPokemon = (pokemonObj) => {
-  party.push(pokemonObj);
-};
+// game.catchPokemon = (pokemonObj) => {
+//   party.push(pokemonObj);                  <--- my original code. works but is anonymous
+// };
 
-game.catchPokemon(pokemon[10]);
+game.catchPokemon(pokemon[10]); // caught Metapod
 
 /*
 Exercise 12
@@ -203,8 +215,10 @@ game.catchPokemon = (pokemonObj) => {
   party.push(pokemonObj);
 };
 
-game.catchPokemon(pokemon[67]);
-console.log(party);
+game.catchPokemon(pokemon[67]); // use a pokeball to catch Machamp
+game.catchPokemon(pokemon[150]); // using another to catch Mew. pokeball count should be 6
+// console.log(party); // the party should include the new additions Metapod and Machamp
+console.log(game.items);
 /*
 Exercise 13
 1. Similar to Exercise 7, now complete gyms with a difficulty below 6. How will you approach this?
@@ -245,16 +259,7 @@ const gymTally = {
   completed: 0,
   incomplete: 0,
 };
-
-game.gymStatus = () => {
-  for (let i = 0; i < game.gyms.length; i++) {
-    if (game.gyms[i].completed === true) {
-      gymTally.completed += 1;
-    } else {
-      gymTally.incomplete += 1;
-    }
-  }
-};
+// originally this was where the anonymous function was but i like it better inside the game object.
 game.gymStatus();
 
 console.log(gymTally);
