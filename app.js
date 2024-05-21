@@ -17,6 +17,12 @@ const game = {
     { name: "pokeball", quantity: 8 },
     { name: "rare candy", quantity: 99 },
   ],
+  partyCount() {
+    for (let currentTally = 0; currentTally < party.length; currentTally++) {
+      monsterTally += 1;
+      return monsterTally;
+    }
+  },
 };
 
 //console.dir(pokemon, { maxArrayLength: null });
@@ -147,9 +153,9 @@ Exercise 10
 
 Solve Exercise 10 here:
 */
-pokemon.forEach(entry => {
+pokemon.forEach((entry) => {
   if (entry.starter !== false) {
-    console.log(entry.name)
+    console.log(entry.name);
   }
 });
 /*
@@ -164,10 +170,10 @@ After writing this method, call it and pass in a Pokemon object of your choice f
 Solve Exercise 11 here:
 */
 game.catchPokemon = (pokemonObj) => {
-  party.push(pokemonObj)
-}
+  party.push(pokemonObj);
+};
 
-game.catchPokemon(pokemon[10])
+game.catchPokemon(pokemon[10]);
 
 /*
 Exercise 12
@@ -182,17 +188,16 @@ Also, log the `game.items` array to confirm that the pokeball quantity is being 
 Solve Exercise 12 here:
 */
 
-
 game.catchPokemon = (pokemonObj) => {
-  let pokeball = game.items.find((item) => item.name === 'pokeball');
-  
-  pokeball.quantity -= 1;
-  
-  party.push(pokemonObj)
-}
+  let pokeball = game.items.find((item) => item.name === "pokeball");
 
-game.catchPokemon(pokemon[67])
-console.log(party)
+  pokeball.quantity -= 1;
+
+  party.push(pokemonObj);
+};
+
+game.catchPokemon(pokemon[67]);
+console.log(party);
 /*
 Exercise 13
 1. Similar to Exercise 7, now complete gyms with a difficulty below 6. How will you approach this?
@@ -203,10 +208,10 @@ Solve Exercise 13 here:
 
 for (let i = 0; i < game.gyms.length; i++) {
   if (game.gyms[i].difficulty < 6) {
-    game.gyms[i].completed = true
+    game.gyms[i].completed = true;
   }
-};
-console.log(game.gyms)
+}
+console.log(game.gyms);
 /*
 Exercise 14
 1. Create a `gymStatus` method in `game` to tally completed and incomplete gyms.
@@ -231,22 +236,21 @@ Solve Exercise 14 here:
 */
 const gymTally = {
   completed: 0,
-  incomplete: 0
+  incomplete: 0,
 };
 
-game.gymStatus= () => {
+game.gymStatus = () => {
   for (let i = 0; i < game.gyms.length; i++) {
     if (game.gyms[i].completed === true) {
       gymTally.completed += 1;
-    }else {
+    } else {
       gymTally.incomplete += 1;
     }
-    
   }
-}
+};
 game.gymStatus();
 
-console.log(gymTally)
+console.log(gymTally);
 /*
 Exercise 15
 1. Add a `partyCount` method to `game` that counts the number of Pokémon in your party.
@@ -258,3 +262,5 @@ This method should:
 
 Solve Exercise 15 here:
 */
+game.partyCount();
+console.log(game.partyCount());
