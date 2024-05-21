@@ -202,8 +202,8 @@ Solve Exercise 13 here:
 */
 
 for (let i = 0; i < game.gyms.length; i++) {
-  if (game.gyms.difficulty < 6) {
-    gyms[i].completed = true
+  if (game.gyms[i].difficulty < 6) {
+    game.gyms[i].completed = true
   }
 }
 console.log(game.gyms)
