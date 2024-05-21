@@ -193,3 +193,17 @@ game.catchPokemon = (pokemonObj) => {
 
 game.catchPokemon(pokemon[67])
 console.log(party)
+/*
+Exercise 13
+1. Similar to Exercise 7, now complete gyms with a difficulty below 6. How will you approach this?
+ (change the value of `complete` in the qualifying objects from false to true).
+
+Solve Exercise 13 here:
+*/
+
+for (let i = 0; i < game.gyms.length; i++) {
+  if (game.gyms.difficulty < 6) {
+    gyms[i].completed = true
+  }
+}
+console.log(game.gyms)
