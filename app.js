@@ -21,8 +21,8 @@ const game = {
   partyCount() {
     party.forEach((pokemon) => {
       monsterTally += 1;
-      console.log(monsterTally);
     });
+    console.log(monsterTally);
   },
   catchPokemon(pokemonObj) {
     party.push(pokemonObj);
@@ -289,7 +289,7 @@ for (let i = 0; i < game.gyms.length; i++) {
     game.gyms[i].completed = true;
   }
 }
-console.log(game.gyms);
+// console.log(game.gyms);
 /*
 Exercise 17
 1. Log the entire `game` object to the console. Take a moment to review the changes you've made throughout the exercises.
