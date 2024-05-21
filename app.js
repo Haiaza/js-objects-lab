@@ -17,6 +17,7 @@ const game = {
     { name: "pokeball", quantity: 8 },
     { name: "rare candy", quantity: 99 },
   ],
+  difficulty: undefined,
   partyCount() {
     party.forEach((pokemon) => {
       monsterTally += 1;
@@ -31,8 +32,9 @@ const game = {
 // assuming the numbers are in order the index goes like this
 // desired number index == desired number value - 1
 
-console.log(pokemon[58].name);
-
+// console.log(pokemon[58].name);
+// Commenting to declutter the terminal...
+// Excecise 2 answer
 console.log(game);
 /*
 Exercise 3
@@ -41,15 +43,19 @@ Exercise 3
 Solve Exercise 3 here:
 */
 //dot notation is quicker
+// before both methods below the INITIAL value must be determined. here it is undefined because it will be defined below.
+
 game.difficulty = "Med";
 // OR
-//bracket notation is a little different
-const difficulty = "x";
-// game[difficulty] = "Easy";
-// console.log(game[difficulty]);
+//bracket notation is a little different. you need to first make a new property and name it, then call the new property with the object and assign what their value should be.
+
+// const newProperty = "difficulty";
+// game[newProperty] = "Easy";
+
 // console.log(game.difficulty);
 // bracket notation in the log show's the assignment side by side inside the difficulty property.
-console.log(game);
+// console.log(game);
+
 /*
 Exercise 4
 1. Select a starter Pokémon from the `pokemon` array. Remember, a starter Pokémon's `starter` property is true.
@@ -84,6 +90,7 @@ Exercise 6
 Solve Exercise 6 here:
 */
 const partyHp = () => {
+  // the mdn says descending order should be like below, with the b variable proceeding the a variable
   party.sort((a, b) => b.hp - a.hp);
   party.forEach((member) => {
     console.log(member.hp);
@@ -98,7 +105,7 @@ Exercise 7
 
 Solve Exercise 7 here:
 */
-
+// more or less self explanitory
 game.gyms.forEach((gym) => {
   if (gym.difficulty < 3) {
     gym.completed = true;
@@ -120,17 +127,17 @@ More Hints: The existing starter Pokemon will be *replaced* in your party with t
 
 Solve Exercise 8 here:
 */
-console.log(party);
+// console.log(party);
 
 let evolveCharmander = () => {
-  let charmanderIndex = party.findIndex((pokedex) => pokedex.number === 4);
+  let charmanderSlot = party.findIndex((pokedex) => pokedex.number === 4);
   // so the index method when it CANNOT find something returns -1, when it does find the thing, it returns that value
   // the below logic only runs when that value is anything but -1, aka indexFound
-  if (charmanderIndex !== -1) {
-    // we open the party and at the location of charmanderIndex we are going to replace the charmander info with Charmeleon
+  if (charmanderSlot !== -1) {
+    // we open the party and at the location of charmanderSlot we are going to replace the Charmander info with Charmeleon
 
     // pokedex in these two functions refers to the pokemon variable inside data.js . i thought pokedex makes the most sense, though its confusing to get  from reading alone.
-    party[charmanderIndex] = pokemon.find((pokedex) => pokedex.number === 5);
+    party[charmanderSlot] = pokemon.find((pokedex) => pokedex.number === 5);
   }
 };
 evolveCharmander();
